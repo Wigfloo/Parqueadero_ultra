@@ -1,0 +1,87 @@
+// Ultra 1
+int TRIG1 = 26;
+int ECO1 = 27;
+int DURACION1;
+int DISTANCIA1;
+
+// Ultra 2
+int TRIG2 = 23;
+int ECO2 = 12;
+int DURACION2;
+int DISTANCIA2;
+
+// Ultra 3
+int TRIG3 = 25;
+int ECO3 = 22;
+int DURACION3;
+int DISTANCIA3;
+
+  
+void setup()
+{
+  //Entrada y salida de ultra 1
+  pinMode(TRIG1, OUTPUT);
+  pinMode(ECO1, INPUT);
+
+
+ //Entrada y salida de ultra 2
+  pinMode(TRIG2, OUTPUT);
+  pinMode(ECO2, INPUT);
+
+
+  //Entrada y salida de ultra 3
+  pinMode(TRIG3, OUTPUT);
+  pinMode(ECO3, INPUT);
+  Serial.begin(115200);
+
+}
+
+void loop()
+{
+
+ digitalWrite(TRIG1, HIGH);
+  delay(1);
+  digitalWrite(TRIG1, LOW);
+  DURACION1 = pulseIn(ECO1, HIGH);
+  DISTANCIA1 = DURACION1 / 58.2;
+
+  digitalWrite(TRIG2, HIGH);
+  delay(1);
+  digitalWrite(TRIG2, LOW);
+
+  DURACION2 = pulseIn(ECO2, HIGH);
+  DISTANCIA2 = DURACION2 / 58.2;
+
+  digitalWrite(TRIG3, HIGH);
+  delay(1);
+  digitalWrite(TRIG3, LOW);
+  DURACION3 = pulseIn(ECO3, HIGH);
+  DISTANCIA3 = DURACION3 / 58.2;
+
+
+
+  if (DISTANCIA1 <= 7) {
+    Serial.println("ESPACIO 1 ESTA OCUPADO");
+  }
+  else {
+    Serial.println("ESPACIO 1 ESTA LIBRE");
+  }
+
+  if (DISTANCIA2 <= 7) {
+    Serial.println("EPACIO 2 ESTA OCUPADO");
+  }
+  else {
+    Serial.println("EPACIO 2 ESTA LIBRE");
+  }
+
+
+  if (DISTANCIA3 <= 7) {
+    Serial.println("ESPACIO 3 ESTA OCUPADO\n");
+  }
+  else {
+    Serial.println("ESPACIO 3 ESTA LIBRE\n");
+  }
+
+
+  delay(2000);
+}
