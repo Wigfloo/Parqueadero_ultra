@@ -1,0 +1,476 @@
+/************************* CARACTERISTICAS GLOBALES *************************/
+html{
+    font-size: 62.5%; /*Reset para REMS 1 REM = 10px de 16px*/
+}
+
+body{
+    margin:0;
+    /*background-color: #16245a; /*#f4e7a5 anterior*/
+    background-image: url(inicio1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    
+}
+/******************************** CABECERA ********************************/
+
+.header{
+    background-image: url(background.jpg);
+    background-position: 70% 15%;
+    background-size:cover;
+    height:100vh;
+    min-height: 60rem;
+    overflow: hidden;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    align-items: center;
+}
+.navegacion a{
+    color: #ffff00;/*fc2d03*/
+    text-decoration: none;
+    font-size: 2.4rem;/*2.8*/
+    font-weight: 600;
+    margin-right: 4rem;
+    position: relative;
+    right:-67rem;/*-90*/
+    
+}
+
+.navegacion a:hover{
+    color:#25f145;
+}
+
+.navegacion .btnLogin-popup{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.0em;
+    color:#ffff00;
+    font-weight: 600;
+    margin-left: 10px;
+    transition: .5s;
+}
+
+.navegacion .btnLogin-popup:hover{
+    background: #fff;
+    color: #25f145;
+}
+
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+.title_main{
+    color:#E0FFFF ;/*#c0f3f9*/ /*color inicial #2dd28e #e9fefe*/
+    font-size: 6.5rem;/*5.5*/
+    position: relative;
+    bottom:-40rem;/*-74*/
+    right:-50rem;/*-35*//*-27*/
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+
+@media screen and (max-width:768px) { /*Celular pequeño*/
+    .header .contenedor .title_main{ 
+        color:#25f145;
+        position: relative;
+        bottom: -10rem;
+        right: -10rem;
+        font-size: 1.8rem;
+    }
+}
+
+h2{
+    text-align: center;
+}
+
+/*************************** QUE PODEMOS OFRECERTE ***************************/
+
+.title2{
+    font-size: 4.8rem;
+    color: cyan; /*darkorchid anterior*/
+}
+
+.table1 h3{
+    font-size: 3rem;
+}
+
+.table1 td{
+    text-align: justify;
+    vertical-align: text-top;
+    color: aliceblue;
+}
+.table1 th{
+    color: aliceblue;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.table1{
+    margin:10px;
+}
+
+.table1 td{
+    width:400px;
+    padding: 10px;
+}
+
+/************************* ASEGURA TU SITIO DESDE CASA *************************/
+.top_tabla{
+    border-spacing: 40px;
+    margin: 0;
+}
+
+.top_tabla h3{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.title3{
+    font-size: 4.8rem;
+    color: cyan;
+    margin: 0;
+    margin-top: 35px;
+}
+
+b{
+    color: cornflowerblue;
+    font-size:22px;
+    position:relative;
+    bottom: 10px;
+}
+
+p{
+    font-size: 18px;
+}
+/************************* ANIMACION TARJETAS *************************/
+.top_carro{
+    margin: 100px;
+    background-color: #FFFAFA;
+    box-shadow: 5px 5px 15px cyan;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.top_carro p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.top_carro b{
+    font-size: 30px;
+}
+
+.top_carro img{
+    margin: 18px 0 18px 0;
+}
+
+.top_carro:hover{
+    cursor: pointer;
+    transform: translateY(-3%); 
+}
+
+.carro-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.top_moto{
+    background-color: #FFFAFA;
+    box-shadow: 5px 5px 15px cyan;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.top_moto p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.top_moto b{
+    font-size: 30px;
+}
+
+.top_moto img{
+    margin: 18px 0 18px 0;
+}
+.top_moto:hover{
+    cursor: pointer;
+    transform: translateY(-3%);
+   
+}
+
+.moto-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.top_cicla{
+    background-color: #FFFAFA;
+    box-shadow: 5px 5px 15px cyan;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.top_cicla p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.top_cicla b{
+    font-size: 30px;
+}
+
+.top_cicla img{
+    margin: 18px 0 18px 0;
+}
+
+.top_cicla:hover{
+    cursor: pointer;
+    transform: translateY(-3%);
+   
+}
+
+.cicla-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/************************* ANIMACION DEL TEXTO *************************/
+#animacion1{
+    animation-name: slidein1;
+    animation-duration: 1.2s;
+    animation-play-state: paused; /* pausa mientras no se ve en la pantalla*/
+}
+
+#animacion2{
+    animation-name: slidein2;
+    animation-duration: 1.5s;
+    animation-play-state: paused;
+}
+
+#animacion3{
+    animation-name: slidein3;
+    animation-duration: 1.8s;
+    animation-play-state: paused;
+}
+
+@keyframes slidein1{
+    from{
+        margin-left: 300%;
+        width:100%;
+    }
+
+    to{
+        margin-left: 0%;
+        width:100%;
+    }
+}
+
+@keyframes slidein2{
+    from{
+        margin-left: 300%;
+        width:100%;
+    }
+
+    to{
+        margin-left: 0%;
+        width:100%;
+    }
+}
+
+@keyframes slidein3{
+    from{
+        margin-left: 300%;
+        width:100%;
+    }
+
+    to{
+        margin-left: 0%;
+        width:100%;
+    }
+}
+
+/************************* SEDES PRINCIPALES *************************/
+.title4{
+    font-size: 4.8rem;
+    color: cyan;
+    margin-top: 65px;
+    margin-bottom: 40px;
+}
+
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+  
+.container .card{
+    position: relative;
+}
+  
+.container .card .face{
+    width:300px;
+    height: 200px;
+    transition:.4s;   
+}
+  
+.container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1  ;
+    transform: translateY(100px);
+}
+  
+.container .card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,
+      -10px 0 80px #f0f,
+      10px 0 80px #0ff;  
+}
+  
+.container .card .face.face1 .content{
+    opacity: .2;
+    transition:  0.5s;
+    text-align: center;
+}
+  
+.container .card:hover .face.face1 .content{
+    opacity: 1; 
+}
+  
+.container .card .face.face1 .content i{
+    font-size: 3em;
+    color: white;
+    display: inline-block; 
+}
+  
+.container .card .face.face1 .content h3{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+}
+  
+.container .card .face.face1 .content a{
+    transition: .5s;
+}
+  
+.container .card .face.face2{
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: justify;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transform: translateY(-100px);
+}
+  
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+  
+.container .card .face.face2 .content p, a{
+    font-size: 10pt;
+    margin: 0 ;
+    padding: 0;
+    color:#333;
+}
+  
+.container .card .face.face2 .content a{
+    text-decoration:none;
+    color: black;
+    box-sizing: border-box;
+    outline : 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+}
+  
+.container .card .face.face2 .content a:hover{
+    background: #333 ;
+    color: whitesmoke; 
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+/************************** FOOTER ************************/
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: beige;
+    margin-top: 15px;
+}
+.footer{
+    display: flex;
+    justify-content:  center; 
+}
+.footer a{
+   color:black;
+   text-decoration:none;
+   font-size:20px;
+   margin: 10px;
+   font-weight: bold;
+}
+
+.footer a:hover{
+    color:#25f145;
+    text-decoration:none;
+}
+
+.footer p{
+   color:black;
+   text-decoration:none;
+   font-size:20px;
+   margin: 10px; 
+   font-weight: bold;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+}
+#final{
+    margin: 0;
+    font-size: 20;
+    
+}
+/*********************************************************************/
+/************************* RESPONSIVE DESIGN *************************/
+/*********************************************************************/
+
+  
+/************************* CARACTERISTICAS GLOBALES *************************/
