@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Registro</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style_registro.css">
+    <link rel="stylesheet" href="../CSS/style_registro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- AGREGADO - RICARDO -->
+    <!--Librerias (frameworks)-------------------------------------------------------------------------------->
+    <!--jQuery-->
+    <script type="text/javascript" src="../jquery/jquery-3.3.1.min.js"></script>
+    <!--Bootstrap con material desing-->
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/mdb.css">
+    <script type="text/javascript" src="../bootstrap/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="../css/temas.css">
+    <!--Necesario para el shake effect-->
+    <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
+    <!--typehead, para usar el autocompletar que funciona con Bootstrap3-->
+    <script language="JavaScript" type="text/javascript" src="../typeahead/bootstrap3-typeahead.js"></script>
+    <!--libreria para usar ya que permite que solo se digiten numeros en los input-->
+    <script language="JavaScript" type="text/javascript" src="../jquery/jquery.numeric.js"></script>
+    <!--Sweetalert2-->
+    <script language="JavaScript" type="text/javascript" src="../sweetalert2/sweetalert2.js"></script>
+    <!--  -->
 </head>
+
 <body>
-   
+
     <header>
         <nav class="navegacion">
             <a href="index.html"><ion-icon name="home"></ion-icon></a>
@@ -30,13 +55,13 @@
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" required>
+                    <input id="input_email" type="email" required>
                     <label>Correo</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"><ion-icon>
                     </span>
-                    <input type="password" required>
+                    <input id="input_password" type="password" required>
                     <label>Contraseña</label>
                 </div>
                 <div class="remember-forgot">
@@ -55,12 +80,12 @@
             </form>
         </div>
 
-       <div class="form-box register">
+        <div class="form-box register">
             <h2>Registrar</h2>
             <form action="#" id="formulario2">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon>
-                    </span> 
+                    </span>
                     <input type="text" required>
                     <label>Nombre de usuario</label>
                 </div>
@@ -92,8 +117,10 @@
         </div>
     </div>
 
-    <script src="script_registro.js"></script>
+    <script src="../JavaScript/script_registro.js"></script>
+    <script src="../JavaScript/script_index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
