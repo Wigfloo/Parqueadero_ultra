@@ -56,14 +56,14 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background2.jpg') no-repeat;
+    background: url('../img/background2.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .tabla{
     position: relative;
-    background: url('fondo.jpg');
+    background: url('../img/fondo.jpg');
     background-size: cover;
     border: 2px solid rgba(0,0,0,0.5);
     border-radius: 20px;
