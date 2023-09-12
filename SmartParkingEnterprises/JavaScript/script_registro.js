@@ -17,11 +17,13 @@ function validar1() {
   //return false;
 
   /* esto lo agregó Ricardo */
+  /**SE DEBEN AGREGAR LOS DEMÁS DATOS SI APLICA */
   var email = $("#input_email").val();
   console.log("🚀 ~ file: script_registro.js:21 ~ validar1 ~ email:", email);
 
   if (email === "") {
     Swal.fire("Debe ingresar cuenta de correo!", "", "error");
+    return;
   }
 
   var password = $("#input_password").val();
@@ -29,13 +31,18 @@ function validar1() {
     "🚀 ~ file: script_registro.js:28 ~ validar1 ~ password:",
     password
   );
+
   if (password === "") {
     Swal.fire(
       "Debe ingresar password!",
       "El campo de contraseña es obligatorio!!",
       "warning"
     );
+    return;
   }
+
+  datos = { email, password };
+  console.log("🚀 ~ file: script_registro.js:44 ~ validar1 ~ datos:", datos);
 
   /**
    *
@@ -43,32 +50,34 @@ function validar1() {
    *
    */
 
-  datos = { email, password };
-  console.log("🚀 ~ file: script_registro.js:44 ~ validar1 ~ datos:", datos);
-  formulario1.reset();
-  //return;
   $.ajax({
     data: datos,
-    /**http://dirIp:puerto/php/nombreArchivo */
-    url: "../php/consultaRegistro.php",
-    cache: false,
+    url: "http://localhost/SmartParkingEnterprise/php/checklogin.php",
+    //cache: false,
     dataType: "json",
     type: "POST",
     beforeSend: function () {
-      $("#div_estado_generar_pdf").html("Generando PDF...");
+      formulario1.reset();
     },
     success: function (respuesta) {
-      /***acá se manejan lso estados del servidor o las rtas del server */
+      console.log("rta: ", respuesta);
+      Swal.fire("" + respuesta.message, "", "success");
+      /***acá se manejan los estados del servidor o las rtas del server */
     },
     error: function (jqXHR, textStatus) {
-      $("#div_estado_generar_pdf").html(jqXHR.responseText);
+      Swal.fire(
+        "!Parece que hay un error en la solicitud AJAX¡",
+        "" + textStatus,
+        "warning"
+      );
     },
   });
 }
 
 /**COMENTAR CADA FUNCIÓN  */
-function validar2() {
+/* function validar2() {
   console.log("Se envio el nombre2");
   formulario2.reset();
   return false;
 }
+ */

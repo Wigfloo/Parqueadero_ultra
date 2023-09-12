@@ -1,0 +1,5 @@
+options -indexes
+php_value date.timezone 'America/Bogota'
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
