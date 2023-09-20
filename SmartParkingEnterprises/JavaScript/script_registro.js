@@ -52,7 +52,7 @@ function validar1() {
 
   $.ajax({
     data: datos,
-    url: "http://localhost/SmartParkingEnterprise/php/checklogin.php",
+    url: "http://localhost/SmartParkingEnterprise/checklogin.php",
     //cache: false,
     dataType: "json",
     type: "POST",
