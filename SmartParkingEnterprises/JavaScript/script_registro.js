@@ -10,7 +10,7 @@ loginLink.addEventListener("click", () => {
   wrapper.classList.remove("active");
 });
 
-function validar1() {
+function login() {
   var nombre1 = "se envió el nombre1";
   console.log(nombre1);
   // formulario1.reset();
@@ -19,7 +19,7 @@ function validar1() {
   /* esto lo agregó Ricardo */
   /**SE DEBEN AGREGAR LOS DEMÁS DATOS SI APLICA */
   var email = $("#input_email").val();
-  console.log("🚀 ~ file: script_registro.js:21 ~ validar1 ~ email:", email);
+  console.log("🚀 ~ file: script_registro.js:21 ~ login ~ email:", email);
 
   if (email === "") {
     Swal.fire("Debe ingresar cuenta de correo!", "", "error");
@@ -28,7 +28,7 @@ function validar1() {
 
   var password = $("#input_password").val();
   console.log(
-    "🚀 ~ file: script_registro.js:28 ~ validar1 ~ password:",
+    "🚀 ~ file: script_registro.js:28 ~ login ~ password:",
     password
   );
 
@@ -42,7 +42,7 @@ function validar1() {
   }
 
   datos = { email, password };
-  console.log("🚀 ~ file: script_registro.js:44 ~ validar1 ~ datos:", datos);
+  console.log("🚀 ~ file: script_registro.js:44 ~ login ~ datos:", datos);
 
   /**
    *
@@ -52,7 +52,7 @@ function validar1() {
 
   $.ajax({
     data: datos,
-    url: "http://localhost/SmartParkingEnterprise/checklogin.php",
+    url: "http://localhost/SmartParkingEnterprise/registrarusuario.php",//antes era checklogin
     //cache: false,
     dataType: "json",
     type: "POST",
@@ -75,9 +75,10 @@ function validar1() {
 }
 
 /**COMENTAR CADA FUNCIÓN  */
-/* function validar2() {
+function register() {
+  alert("aca voy")
   console.log("Se envio el nombre2");
   formulario2.reset();
   return false;
 }
- */
+
