@@ -2,6 +2,16 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <!--Zoom en moviles, bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="../css/temas.css">
+    <!--Necesario para el shake effect-->
+    <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
+
     <title>Smart Parking Enterprises</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style_index.css">
@@ -10,7 +20,13 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <!--Bootstrap con material desing-->
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/mdb.css">
+    <script type="text/javascript" src="../bootstrap/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,17 +35,17 @@
         <div class="contenedor">
             <div class="barra">
                 <nav class="navegacion">
-                <a href="index.html"><ion-icon name="home"></ion-icon></a>
-                <a href="nosotros.html">Quienes somos</a>
-                <a href="contactanos.html">Contáctanos</a>
-                <a href="registro.html">
-                    <button class="btnLogin-popup">Acceder</button>
-                </a>
-                <!--<img src="../img/inicio.jpg" alt="imagen celular">--> 
+                    <a href="index.html"><ion-icon name="home"></ion-icon></a>
+                    <a href="nosotros.html">Quienes somos</a>
+                    <a href="contactanos.html">Contáctanos</a>
+                    <a href="registro.html">
+                        <button class="btnLogin-popup">Acceder</button>
+                    </a>
+                    <!--<img src="../img/inicio.jpg" alt="imagen celular">-->
                 </nav>
             </div>
             <h1 class="title_main">Smart Parking Enterprises</h1>
-            
+
 
         </div>
     </header>
@@ -39,137 +55,174 @@
     </audio>*/-->
     <!------------------- Lo mas vendido ------------------->
     <h2 class="title3">¡Asegura tu sitio desde casa!</h2>
-    <center><table class="top_tabla">
-        <tr>
-            
-            <td class="top_carro">
-                <center><h3>Carros</h3>
-                    <button onclick="mostrar1()" class="carro-button">
-                        <img src="../img/carro.png" alt="imagen celular" width="300" height="200">
-                    </button>                      
-                </center>
-                <!--<img src="carro.png" alt="imagen celular" width="300" height="200">-->
-                <p>Reserva tu espacio por tan solo: </p>
-                <center><b>$3.000</b></center>
-            </td>
-            <td class="top_moto">
-                <center><h3>Motos</h3>
-                    <button onclick="mostrar2()" class="moto-button">
-                        <img src="../img/moto.png" alt="imagen   celular" width="300" height="200">
-                    </button> 
-               </center>
-                <p>Reserva tu espacio por tan solo: </p>                <!--- 15,6"FHD- RAM 8GB - 512SSD - Windows 10 Home - Color Negro-->
-                <center><b>$1.500</b></center>
-            </td>
-            <td class="top_cicla">
-               <center><h3>Ciclas</h3>
-                    <button onclick="mostrar3()" class="cicla-button">
-                        <img src="../img/cicla.png" alt="imagen celular" width="300" height="200">
-                    </button> 
-               </center>
-               <p>Reserva tu espacio por tan solo: </p>
-                <center><b>$1.000</b></center>
-            </td>
+    <center>
+        <table class="top_tabla">
+            <tr>
 
-        </tr>
-        
-    </table></center>
+                <td class="top_carro">
+                    <center>
+                        <h3>Carros</h3>
+                        <button onclick="mostrar1()" class="carro-button">
+                            <img src="../img/carro.png" alt="imagen celular" width="300" height="200">
+                        </button>
+                    </center>
+                    <!--<img src="carro.png" alt="imagen celular" width="300" height="200">-->
+                    <p>Reserva tu espacio por tan solo: </p>
+                    <center><b>$3.000</b></center>
+                </td>
+                <td class="top_moto">
+                    <center>
+                        <h3>Motos</h3>
+                        <button onclick="mostrar2()" class="moto-button">
+                            <img src="../img/moto.png" alt="imagen   celular" width="300" height="200">
+                        </button>
+                    </center>
+                    <p>Reserva tu espacio por tan solo: </p>
+                    <!--- 15,6"FHD- RAM 8GB - 512SSD - Windows 10 Home - Color Negro-->
+                    <center><b>$1.500</b></center>
+                </td>
+                <td class="top_cicla">
+                    <center>
+                        <h3>Ciclas</h3>
+                        <button onclick="mostrar3()" class="cicla-button">
+                            <img src="../img/cicla.png" alt="imagen celular" width="300" height="200">
+                        </button>
+                    </center>
+                    <p>Reserva tu espacio por tan solo: </p>
+                    <center><b>$1.000</b></center>
+                </td>
+
+            </tr>
+
+        </table>
+    </center>
+
+    
 
     <!------------------- ¿Qué podemos ofrecerte? ------------------->
-    <center><h2 class="title2">¿Qué podemos ofrecerte?</h2></center>    
-    <center><table class="table1">
-        <tr>
-            <th>
-                <center><img src="../img/seguridad.png" width="200" height="200"><h3>Seguridad</h3></center>
-            </th>
-            <th>
-                <center><img src="../img/tiempo.png" width="200" height="200"><h3>Tiempo</h3></center>
-            </th>
-            <th>
-                <center><img src="../img/trafico.png" width="200" height="200"><h3>Movilidad</h3></center>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <p id="animacion1">Garantizamos la seguridad de los vehículos y sus ocupantes, mediante cámras de seguridad, control de acceso y alarmas. Definitivamente una tranquilidad que no ofrecen las calles.</p>
-            </td>
-    
-            <td>
-                <p id="animacion2">Smart Parking Enterprises agiliza el proceso de estacionamiento gracias a la opción de apartar el puesto desde casa , ahorramos el tiempo de buscar un parqueadero y un espacio dentro del mismo. </p>
-            </td>
-    
-            <td>
-                <p id="animacion3">Al proporcionar información actualizada sobre la disponibilidad de espacios y rutas de acceso, Smart Parking Enterprises mejora la movilidad en áreas urbanas y congestivas.  </p>
-            </td>
-    
-        </tr>
-    </table></center>
+    <center>
+        <h2 class="title2">¿Qué podemos ofrecerte?</h2>
+    </center>
+    <center>
+        <table class="table1">
+            <tr>
+                <th>
+                    <center><img src="../img/seguridad.png" width="200" height="200">
+                        <h3>Seguridad</h3>
+                    </center>
+                </th>
+                <th>
+                    <center><img src="../img/tiempo.png" width="200" height="200">
+                        <h3>Tiempo</h3>
+                    </center>
+                </th>
+                <th>
+                    <center><img src="../img/trafico.png" width="200" height="200">
+                        <h3>Movilidad</h3>
+                    </center>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p id="animacion1">Garantizamos la seguridad de los vehículos y sus ocupantes, mediante cámras de
+                        seguridad, control de acceso y alarmas. Definitivamente una tranquilidad que no ofrecen las
+                        calles.</p>
+                </td>
+
+                <td>
+                    <p id="animacion2">Smart Parking Enterprises agiliza el proceso de estacionamiento gracias a la
+                        opción de apartar el puesto desde casa , ahorramos el tiempo de buscar un parqueadero y un
+                        espacio dentro del mismo. </p>
+                </td>
+
+                <td>
+                    <p id="animacion3">Al proporcionar información actualizada sobre la disponibilidad de espacios y
+                        rutas de acceso, Smart Parking Enterprises mejora la movilidad en áreas urbanas y congestivas.
+                    </p>
+                </td>
+
+            </tr>
+        </table>
+    </center>
 
 
     <!------------------- Sedes Principales ------------------->
     <h2 class="title4">Sedes Principales</h2>
-    <center><div class="container">
-        <div class="card">
-          <div class="face face1">
-            <div class="content">
-               <i class="fab fa-windows"></i>            
-              <h3>Medellín</h3>
+    <center>
+        <div class="container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fab fa-windows"></i>
+                        <h3>Medellín</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> Medellín, la "Ciudad de la Eterna Primavera", destaca por su belleza y desarrollo. Los
+                            parqueaderos inteligentes, mejoran la seguridad y optimizan el proceso de estacionamiento.
+                            Ahorran tiempo, reducen la congestión y promueven una movilidad más eficiente.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="face face2">
-            <div class="content">
-              <p> Medellín, la "Ciudad de la Eterna Primavera", destaca por su belleza y desarrollo. Los parqueaderos inteligentes, mejoran la seguridad y optimizan el proceso de estacionamiento. Ahorran tiempo, reducen la congestión y promueven una movilidad más eficiente.</p>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fab fa-android"></i>
+                        <h3>Bucaramanga</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> Bucaramanga, la "Ciudad Bonita", ofrece parqueaderos inteligentes para una mejor experiencia
+                            de estacionamiento. Nuevas tecnologías que satisfacen mejor al cliente, con las que la
+                            ciudad avanza hacia una movilidad más inteligente y cómoda para sus ciudadanos. </p>
+                    </div>
+                </div>
             </div>
-          </div>
-       </div>
-       
-       <div class="card">
-          <div class="face face1">
-            <div class="content">
-            <i class="fab fa-android"></i>               
-                <h3>Bucaramanga</h3>
+
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <i class="fab fa-apple"></i>
+                        <h3>Bogotá</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> Bogotá, la vibrante capital de Colombia, ha entrado tambien en el mundo de los parqueaderos
+                            inteligentes. Estos sistemas tecnológicos garantizan seguridad y eficiencia al gestionar los
+                            espacios disponibles. Solución parcial para la fuerte congestión en las calles de la
+                            capital.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="face face2">
-            <div class="content">
-              <p> Bucaramanga, la "Ciudad Bonita", ofrece parqueaderos inteligentes para una mejor experiencia de estacionamiento. Nuevas tecnologías que satisfacen mejor al cliente, con las que la ciudad avanza hacia una movilidad más inteligente y cómoda para sus ciudadanos. </p>
-            </div>
-          </div>
-       </div>
-       
-       
-       <div class="card">
-          <div class="face face1">
-            <div class="content">
-                <i class="fab fa-apple"></i>
-                <h3>Bogotá</h3>
-            </div>
-          </div>
-          <div class="face face2">
-            <div class="content">
-              <p> Bogotá, la vibrante capital de Colombia, ha entrado tambien en el mundo de los parqueaderos inteligentes. Estos sistemas tecnológicos garantizan seguridad y eficiencia al gestionar los espacios disponibles. Solución parcial para la fuerte congestión en las calles de la capital.</p>
-            </div>
-          </div>
-       </div>
-       
-    </div></center>
-    
+
+        </div>
+    </center>
+
     <footer>
         <div class="footer">
-            <a href="index.html"><ion-icon name="home"></ion-icon></a><p>-</p>
-            <a href="nosotros.html">Quienes somos</a><p>-</p>
-            <a href="contactanos.html">Contáctanos</a><p>-</p>
+            <a href="index.html"><ion-icon name="home"></ion-icon></a>
+            <p>-</p>
+            <a href="nosotros.html">Quienes somos</a>
+            <p>-</p>
+            <a href="contactanos.html">Contáctanos</a>
+            <p>-</p>
             <a href="registro.html">Acceder</a>
         </div>
         <div class="copyright">
-            <p id="final">Copyright © 2022 Mandanos un mensaje via a email a: info@website.com</p>   
-        </div>  
-        
+            <p id="final">Copyright © 2022 Mandanos un mensaje via a email a: info@website.com</p>
+        </div>
+
     </footer>
 
     <script src="../JavaScript/script_index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+
 </body>
+
 </html>
