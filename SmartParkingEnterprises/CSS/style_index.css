@@ -13,6 +13,8 @@ body{
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
+
+    
     
 }
 /******************************** CABECERA ********************************/
@@ -24,6 +26,7 @@ body{
     height:100vh;
     min-height: 60rem;
     overflow: hidden;
+    height: auto;
 }
 
 .barra{
@@ -82,7 +85,7 @@ body{
 
 
 @media screen and (max-width:768px) { /*Celular pequeño*/
-    .header .contenedor .title_main{ 
+    .header .title_main{ 
         color:#25f145;
         position: relative;
         bottom: -10rem;
@@ -93,6 +96,7 @@ body{
 
 h2{
     text-align: center;
+    height: auto;
 }
 
 /*************************** QUE PODEMOS OFRECERTE ***************************/
@@ -100,6 +104,7 @@ h2{
 .title2{
     font-size: 4.8rem;
     color: cyan; /*darkorchid anterior*/
+    height: auto;
 }
 
 .table1 h3{
@@ -155,26 +160,50 @@ p{
     font-size: 18px;
 }
 /************************* ANIMACION TARJETAS *************************/
-.top_carro{
-    margin: 100px;
-    background-color: #FFFAFA;
-    box-shadow: 5px 5px 15px cyan;
-    border-radius: 5px;
-    width: 100px;
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.top_carro p{
+.top_carro, .top_moto, .top_cicla {
+    /* Estilos comunes para todas las clases */
+    margin: auto;
+    cursor: pointer;
+    width: 30%; /* Cambia el ancho a 30% */
+    height: auto;
+    background-color: #f0f0f0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.top_carro p, .top_moto p, .top_cicla p {
     font-size: 20px;
     margin-left: 10px;
 }
 
-.top_carro b{
+.top_carro b, .top_moto b, .top_cicla b {
     font-size: 30px;
 }
 
-.top_carro img{
-    margin: 18px 0 18px 0;
+@media screen and (max-width: 768px) {
+    .top_carro p, .top_moto p, .top_cicla p, .top_carro b, .top_moto b, .top_cicla b {
+        font-size: 16px;
+    }
 }
+
+@media screen and (min-width: 769px) {
+    .top_carro p, .top_moto p, .top_cicla p, .top_carro b, .top_moto b, .top_cicla b {
+        font-size: 20px;
+    }
+}
+.top_carro img{
+    margin: auto;
+    height: auto;
+}
+
 
 .top_carro:hover{
     cursor: pointer;
@@ -189,29 +218,17 @@ p{
     cursor: pointer;
 }
 
-.top_moto{
-    background-color: #FFFAFA;
-    box-shadow: 5px 5px 15px cyan;
-    border-radius: 5px;
-    width: 50px;
-}
 
-.top_moto p{
-    font-size: 20px;
-    margin-left: 10px;
-}
 
-.top_moto b{
-    font-size: 30px;
-}
 
 .top_moto img{
-    margin: 18px 0 18px 0;
+    margin:  auto;
+    height: auto;
 }
+
 .top_moto:hover{
     cursor: pointer;
-    transform: translateY(-3%);
-   
+    transform: translateY(-3%);   
 }
 
 .moto-button {
@@ -222,30 +239,19 @@ p{
     cursor: pointer;
 }
 
-.top_cicla{
-    background-color: #FFFAFA;
-    box-shadow: 5px 5px 15px cyan;
-    border-radius: 5px;
-    width: 50px;
-}
 
-.top_cicla p{
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-.top_cicla b{
-    font-size: 30px;
-}
 
 .top_cicla img{
-    margin: 18px 0 18px 0;
+    margin: auto;
+    height: auto;
 }
+
+
+
 
 .top_cicla:hover{
     cursor: pointer;
     transform: translateY(-3%);
-   
 }
 
 .cicla-button {
