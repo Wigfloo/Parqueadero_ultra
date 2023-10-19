@@ -21,12 +21,13 @@ body{
 
 .header{
     background-image: url(../img/background.jpg);
+    height: auto;
     background-position: 70% 15%;
     background-size:cover;
     height:100vh;
     min-height: 60rem;
     overflow: hidden;
-    height: auto;
+    
 }
 
 .barra{
@@ -132,11 +133,25 @@ h2{
 }
 
 /************************* ASEGURA TU SITIO DESDE CASA *************************/
+/* .top_tabla{
+    width: 100%;
+    border-spacing: 40px;
+    margin: 0;
+    flex-wrap: nowrap;
+} */
+/* .top_tabla{  /*Intento de arreglo
+    width: 100%;
+    
+}
+
+.top_tabla td{
+    width: 300px;
+    padding: 10px;
+} */
 .top_tabla{
     border-spacing: 40px;
     margin: 0;
 }
-
 .top_tabla h3{
     font-size: 4rem;
     margin: 0;
@@ -160,25 +175,114 @@ p{
     font-size: 18px;
 }
 /************************* ANIMACION TARJETAS *************************/
-.contenedor {
+/* .tr_width_row{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+} */
+.top_carro{
+    margin: 100px;
+    background-color: #FFFAFA;
+    box-shadow: 5px 5px 15px cyan;
+    border-radius: 5px;
+    width: 100px;
 }
 
-.top_carro, .top_moto, .top_cicla {
-    /* Estilos comunes para todas las clases */
-    margin: auto;
+.top_carro p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.top_carro b{
+    font-size: 30px;
+}
+
+.top_carro img{
+    margin: 18px 0 18px 0;
+}
+
+.top_carro:hover{
     cursor: pointer;
-    width: 30%; /* Cambia el ancho a 30% */
-    height: auto;
-    background-color: #f0f0f0;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(-3%); 
 }
 
+.carro-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.top_moto{
+    background-color: #FFFAFA;
+    box-shadow: 5px 5px 15px cyan;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.top_moto p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.top_moto b{
+    font-size: 30px;
+}
+
+.top_moto img{
+    margin: 18px 0 18px 0;
+}
+.top_moto:hover{
+    cursor: pointer;
+    transform: translateY(-3%);
+   
+}
+
+.moto-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.top_cicla{
+    background-color: #FFFAFA;
+    box-shadow: 5px 5px 15px cyan;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.top_cicla p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.top_cicla b{
+    font-size: 30px;
+}
+
+.top_cicla img{
+    margin: 18px 0 18px 0;
+}
+
+.top_cicla:hover{
+    cursor: pointer;
+    transform: translateY(-3%);
+   
+}
+
+.cicla-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* 
 .top_carro p, .top_moto p, .top_cicla p {
     font-size: 20px;
     margin-left: 10px;
@@ -260,7 +364,7 @@ p{
     padding: 0;
     margin: 0;
     cursor: pointer;
-}
+} */
 
 /************************* ANIMACION DEL TEXTO *************************/
 #animacion1{
@@ -335,12 +439,13 @@ p{
   
 .container .card{
     position: relative;
+    background: transparent;   
 }
   
 .container .card .face{
     width:300px;
     height: 200px;
-    transition:.4s;   
+    transition:.4s;  
 }
   
 .container .card .face.face1{
@@ -357,12 +462,12 @@ p{
 .container .card:hover .face.face1{
     transform: translateY(0);
     box-shadow:
-      inset 0 0 60px whitesmoke,
+      inset 0 0 60px whitesmoke, /*Color dentro del recuadro de la animación*/
       inset 20px 0 80px #f0f,
       inset -20px 0 80px #0ff,
       inset 20px 0 300px #f0f,
       inset -20px 0 300px #0ff,
-      0 0 50px #fff,
+      0 0 50px #fff, /* Color borde animación*/
       -10px 0 80px #f0f,
       10px 0 80px #0ff;  
 }
@@ -377,13 +482,13 @@ p{
     opacity: 1; 
 }
   
-.container .card .face.face1 .content i{
+.container .card .face.face1 .content i{ /*Color de los iconos*/
     font-size: 3em;
     color: white;
     display: inline-block; 
 }
   
-.container .card .face.face1 .content h3{
+.container .card .face.face1 .content h3{ /*Color de los titulos*/
     font-size: 1.5em;
     color: white;
     text-align: center;
@@ -393,7 +498,7 @@ p{
     transition: .5s;
 }
   
-.container .card .face.face2{
+.container .card .face.face2{ /*Color de fondo texto post animacion*/
     position: relative;
     background: whitesmoke;
     display: flex;

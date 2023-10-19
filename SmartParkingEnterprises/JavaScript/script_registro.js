@@ -118,6 +118,7 @@ function login() {
 /**ESTA FUNCIÓN SE EJECUTA CUANDO SE CREA UN REGISTRO*/
 function register() {
   /* esto lo agregó Ricardo */
+  
   /**SE DEBEN AGREGAR LOS DEMÁS DATOS SI APLICA */
   var username = $("#input_username_registro").val();
   console.log("🚀 ~ file: script_registro.js:21 ~ login ~ username:", username);
@@ -148,7 +149,17 @@ function register() {
     return;
   }
 
-  datos = { username, email, password };
+  var idRol = $("#selectRol").children("option:selected").attr("id");
+  console.log("🚀 ~ file: script_registro.js:28 ~ login ~ idRol:", idRol);
+  if (idRol === "") {
+    Swal.fire(
+      "Debe seleccionar el Rol!",
+      "El campo de rol es obligatorio!!",
+      "warning"
+    );
+    return;
+  }
+  datos = { username, email, password, idRol };
   console.log("🚀 ~ file: script_registro.js:44 ~ login ~ datos:", datos);
 
   /**
@@ -164,21 +175,24 @@ function register() {
     dataType: "json",
     type: "POST",
     beforeSend: function () {
-      formulario1.reset();
+      formulario2.reset();
     },
     success: function (respuesta) {
-      console.log("rta: ", respuesta);
+      console.log("rta: ", respuesta.message);
       /***acá se manejan los estados del servidor o las rtas del server */
 
       /* CASOS EN LOS QUE LA RTA DEL SERVDIOR ES EXITOSA */
       if (respuesta.error === "El usuario ya se encuentra registrado!!") {
         Swal.fire("" + respuesta.error, "", "warning");
+        return;
       }
       if (respuesta.message === "registroExitoso") {
         Swal.fire("!El registro ha sido exitoso!", "", "success");
+        return;
       }
       if (respuesta.error === "Error al crear el usuario") {
         Swal.fire("" + respuesta.error, "", "error");
+        return;
       }
       /* SI HAY ERROR DE CONEXIÓN CON LA BD */
       if (respuesta.dbError !== "") {
@@ -187,12 +201,22 @@ function register() {
       }
     },
     error: function (jqXHR, textStatus) {
-      console.log(textStatus);
-      Swal.fire(
-        "!Parece que hay un error en la solicitud AJAX¡",
-        "" + textStatus,
-        "warning"
-      );
+      console.log("Response: " + jqXHR.status);
+      if (jqXHR.status === 500) {
+        // Si el código de estado es 500
+        Swal.fire(
+          "¡Error en el servidor!",
+          "Ha ocurrido un error interno en el servidor. Por favor, intenta nuevamente más tarde.",
+          "error"
+        );
+      } else {
+        console.log(textStatus);
+        Swal.fire(
+          "!Parece que hay un error en la solicitud AJAX¡",
+          "" + textStatus,
+          "warning"
+        );
+      }
     },
   });
 }
