@@ -19,6 +19,10 @@ function mostrar1() {
         return 'Por favor, ingrese un valor válido.';
       } else if (value > 3) {
         return 'El valor ingresado no puede ser mayor a 3.';
+      } else if (value < 0) {
+        return 'El valor ingresado no puede ser negativo.';
+      } else if (value == 0) {
+        return 'El valor ingresado no puede ser 0.';
       }
     },
     customClass: {
@@ -105,6 +109,10 @@ function mostrar2() {
         return 'Por favor, ingrese un valor válido.';
       } else if (value > 3) {
         return 'El valor ingresado no puede ser mayor a 3.';
+      } else if (value < 0) {
+        return 'El valor ingresado no puede ser negativo.';
+      } else if (value == 0) {
+        return 'El valor ingresado no puede ser 0.';
       }
     },
     customClass: {
@@ -192,6 +200,10 @@ function mostrar3() {
         return 'Por favor, ingrese un valor válido.';
       } else if (value > 3) {
         return 'El valor ingresado no puede ser mayor a 3.';
+      } else if (value < 0) {
+        return 'El valor ingresado no puede ser negativo.';
+      } else if (value == 0) {
+        return 'El valor ingresado no puede ser 0.';
       }
     },
     customClass: {

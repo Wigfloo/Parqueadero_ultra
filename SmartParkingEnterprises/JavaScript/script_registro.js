@@ -5,9 +5,8 @@ const registerLink = document.querySelector(".register-link");
 registerLink.addEventListener("click", () => {
   wrapper.classList.add("active");
 });
-
 loginLink.addEventListener("click", () => {
-  wrapper.classList.remove("active");
+wrapper.classList.remove("active");
 });
 
 /* ESTA FUNCIÓN SE EJECUTA CUANDO SE INICIA SESIÓN */
@@ -89,7 +88,10 @@ function login() {
           "Bienvenid@ " + respuesta.nombre,
           "Ingresaste como " + respuesta.roll,
           "success"
-        );
+        ).then(function() {
+          // Redirigir a usuario.html
+          window.location.href = "../HTML/usuario.html";
+        });
         return;
       }
     },
