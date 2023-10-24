@@ -90,7 +90,7 @@ function login() {
           "success"
         ).then(function() {
           // Redirigir a usuario.html
-          window.location.href = "../HTML/usuario.html";
+          window.location.href = "../HTML/index.html";
         });
         return;
       }
