@@ -6,6 +6,19 @@
 }
 
 header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 20px 0 340px; /* ARRIBA - DERECHA - ABAJO -IZQUIERDA*/
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index: 99;   
+}
+/******* HEADER ANTERIOR ******/
+/*header{
     position: fixed;
     top: 0;
     left: 0;
@@ -15,17 +28,36 @@ header{
     justify-content:right;
     align-items:center;
     z-index: 99;   
+}*/
+
+/******* CLASE NAVEGACION AGREGADO ******/
+.navegacion {                                
+    list-style: none;
+    display: flex;/* PODRIA QUITARSE QUIZAS PARA QUE NO SE BAJE LOS TITULOS*/
+    margin: 0;
+    padding: 0;
 }
 
 .navegacion a {
     position: relative;
-    font-size: 1.4rem;/*2.8*/
+    font-size: 1.4rem;
+    color: #ffff00;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 20px; /* Espacio entre enlaces en todos los tamaños de pantalla */
+}
+/******* NAVEGACION A ANTERIOR ******/
+/* .navegacion a {
+    position: relative;
+    font-size: 1.4rem;
     color: #ffff00;
     text-decoration: none;
     font-weight: 600;
     margin-top: 30px;
     margin-left: 60px;
-}
+} */
+
+
 
 .navegacion a:hover{
     color:#25f145;
@@ -51,6 +83,22 @@ header{
     color: #25f145;
 }
 
+/******* ESTILO RESPONSIVO PARA EL ENCABEZADO *******/
+@media (max-width: 768px) {
+    header {
+        padding: 14px 20px; /* Ajustar el padding para pantallas pequeñas */
+    }
+
+    .navegacion {
+        /*flex-direction: column;*/
+        align-items: center;
+    }
+
+    .navegacion a {
+        margin: 0px 20px;
+    }
+}
+/***************************/
 body{
     display: flex;
     justify-content: center;
