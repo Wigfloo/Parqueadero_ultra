@@ -30,6 +30,7 @@ function selectRol() {
                     $("#selectRol").append("<option id=" + respuesta[i].id + ">" + respuesta[i].nombre + "</option>");
                 }
             }
+
             /* ENLACE A registro.html */
          /*    // Crear un enlace a registro.html y redirigir al hacer clic en él
             var registroLink = $("<a>Ir a registro</a>");

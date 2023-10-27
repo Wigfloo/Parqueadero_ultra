@@ -77,10 +77,10 @@ body{
 
 .title_main{
     color:#E0FFFF ;/*#c0f3f9*/ /*color inicial #2dd28e #e9fefe*/
-    font-size: 6.5rem;/*5.5*/
+    font-size: 8.5rem;/*5.5*/
     position: relative;
-    bottom:-40rem;/*-74*/
-    right:-50rem;/*-35*//*-27*/
+    bottom:-37rem;/*-74*/
+    right:-52rem;/*-35*//*-27*/
     font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -106,7 +106,7 @@ h2{
 }
 
 .mapa_parqueadero{
-    font-size: 4.8rem;/*5.5*/
+    font-size: 4.8rem;/*5.5*/ 
     color: cyan; /*darkorchid anterior*/
     height: auto;
 }

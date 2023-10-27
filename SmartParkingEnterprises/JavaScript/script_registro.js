@@ -27,6 +27,7 @@ function login() {
   }
 
   var password = $("#input_password").val();
+  
   console.log("🚀 ~ file: script_registro.js:28 ~ login ~ password:", password);
 
   if (password === "") {
@@ -37,6 +38,10 @@ function login() {
     );
     return;
   }
+
+  // console.log("rta: ", respuesta.nombre);
+  //     var nombreBd = respuesta.nombre;
+  //     $("#nombrePerfil").html(nombreBd);
 
   datos = { email, password };
   console.log("🚀 ~ file: script_registro.js:44 ~ login ~ datos:", datos);
@@ -60,8 +65,9 @@ function login() {
     },
     /***acá se manejan los estados del servidor o las rtas del server */
     success: function (respuesta) {
-      console.log("rta: ", respuesta.error);
       /* SI SE INGRESAN DATOS ALEATORIOS QUE NO EXISTAN EN LA BD */
+      console.log(respuesta)
+
       if (
         respuesta.error ===
         "No se encontraron registros con los datos suministrados"
@@ -91,6 +97,7 @@ function login() {
         ).then(function() {
           // Redirigir a usuario.html
           window.location.href = "../HTML/index.html";
+          $("#nombrePerfil").html();
         });
         return;
       }
@@ -181,6 +188,9 @@ function register() {
     },
     success: function (respuesta) {
       console.log("rta: ", respuesta.message);
+
+      /* capturo el nombre enviado desde la BD */
+      
       /***acá se manejan los estados del servidor o las rtas del server */
 
       /* CASOS EN LOS QUE LA RTA DEL SERVDIOR ES EXITOSA */
