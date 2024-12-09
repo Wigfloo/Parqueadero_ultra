@@ -21,7 +21,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <link rel="stylesheet" href="../css/temas.css">
+    <!-- <link rel="stylesheet" href="../css/temas.css"> -->
     <!--Necesario para el shake effect-->
     <script type="text/javascript" src="../jquery/jquery-ui.js"></script>
     <!--typehead, para usar el autocompletar que funciona con Bootstrap3-->
@@ -34,24 +34,14 @@
 </head>
 
 <body>
-
-    <header>
-        <nav class="navegacion">
-            <a href="index.html"><ion-icon name="home"></ion-icon></a>
-            <a href="nosotros.html">Quienes somos</a>
-            <a href="contactanos.html">Contáctanos</a>
-            <a href="registro.html">
-                <button class="btnLogin-popup">Acceder</button>
-            </a>
-        </nav>
-
-    </header>
+    
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon>
         </span>
+        
         <div class="form-box login">
             <h2>Iniciar sesión</h2>
-            <form id="formulario1">
+            <form id="formulario1">                
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon>
                     </span>
@@ -71,10 +61,11 @@
                     </label>
                     <a href="#">¿Olvidó su contraseña?</a>
                 </div>
-                <button type="submit" onclick="validar1()" class="btn">Ingresar</button>
+                <button type="submit" onclick="login(); userName();" class="btn">Ingresar</button>
+                <!-- onclick="login(); userName(); -->
                 <div class="login-register">
                     <p>¿No tiene cuenta?
-                        <a href="#" class="register-link">Registrarse</a>
+                        <a href="#" onclick="selectRol();" class="register-link">Registrarse</a>
                     </p>
                 </div>
             </form>
@@ -86,20 +77,27 @@
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon>
                     </span>
-                    <input type="text" required>
+                    <input type="text" id="input_username_registro" name="nombre" required>
                     <label>Nombre de usuario</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" required>
+                    <input type="email" id="input_email_registro" required>
                     <label>Correo</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"><ion-icon>
                     </span>
-                    <input type="password" required>
+                    <input type="password" id="input_password_registro" required>
                     <label>Contraseña</label>
+                </div>
+                <div class="select_Roles">
+                    <select id="selectRol" name="rol">
+                        <!-- <option value="1">Admin</option>
+                        <option value="2">Usuario</option>
+                        <option value="3">Agente</option> -->
+                    </select>
                 </div>
                 <div class="remember-forgot">
                     <label>
@@ -107,18 +105,19 @@
                         Acepto Terminos y Condiciones
                     </label>
                 </div>
-                <button type="submit" onclick=" return validar2();" class="btn">Registrar</button>
+                <button type="submit" onclick="register();"  class="btn">Registrar</button>
                 <div class="login-register">
                     <p>¿Ya tiene cuenta?
                         <a href="#" class="login-link">Inicie Sesión</a>
                     </p>
                 </div>
             </form>
-        </div>
+        </div> 
     </div>
 
     <script src="../JavaScript/script_registro.js"></script>
     <script src="../JavaScript/script_index.js"></script>
+    <script src="../JavaScript/script_consultasGlobales.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

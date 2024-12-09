@@ -6,49 +6,16 @@
 }
 
 header{
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 14px 300px;
+    padding: 14px 20px 0 340px; /* ARRIBA - DERECHA - ABAJO -IZQUIERDA*/
     display: flex;
-    justify-content:right;
+    justify-content:space-between;
     align-items:center;
     z-index: 99;   
-}
-
-.navegacion a {
-    position: relative;
-    font-size: 1.4rem;/*2.8*/
-    color: #ffff00;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-left: 60px;
-}
-
-.navegacion a:hover{
-    color:#25f145;
-}
-
-.navegacion .btnLogin-popup{
-    width: 140px;
-    height: 50px;
-    background: transparent;
-    border: 3px solid #fff;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.0em;
-    color:#ffff00;
-    font-weight: 600;
-    margin-left: 15px;
-    transition: .5s;
-}
-
-.navegacion .btnLogin-popup:hover{
-    background: #fff;
-    color: #25f145;
 }
 
 body{
@@ -56,13 +23,14 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('../img/background.jpg') no-repeat;
+    background: url('../img/background5.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .wrapper{
     position: relative;
+    margin-top: 80px;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -92,10 +60,11 @@ body{
 }
 
 .wrapper.active .form-box.login{
-    /*display: none;*/
+    /* display: none; */
     transition: none;
     transform: translateX(-400px);
 }
+
 
 .wrapper .form-box.register{
     position: absolute;
@@ -176,6 +145,29 @@ body{
     color: #0ec6f1;
     line-height: 57px;
 }
+
+.select_Roles{
+    text-align: center;
+}
+#selectRol {
+    text-align: center;
+    width: 200px;  
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    border-radius: 0.5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #5dcbe4;
+}  
 
 .remember-forgot{
     font-size: 0.8em;

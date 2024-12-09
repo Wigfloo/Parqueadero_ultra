@@ -23,7 +23,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background4.jpg') no-repeat ;
+    background: url('../img/background4.jpg') no-repeat ;
     background-size: cover;
     background-position: center;
     
